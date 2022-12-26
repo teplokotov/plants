@@ -2,8 +2,116 @@
   box-sizing: border-box;
 }
 body {
-  min-width: 380px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-width: 320px;
   max-width: 1440px;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+}
+.header-container, .section-welcome, .section-service, .section-contact-us{
+  background-color: #EDF2EC;
+}
+.section-about-us, .section-prices, .section-footer{
+  background-color: #ffffff;
+}
+.section{
+  padding: 0 110px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Header section */
+
+.header-container{
+  height: 134px;
+  font-family: 'Inika', serif;
+  font-size: 16px;
+  padding-top: 42px;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 50px;
+  padding: 0 110px;
+  /* max-width: 1220px;
+  margin: 0 auto; */
+}
+.nav-logo a{
+  text-decoration: none;
+}
+.nav-logo a:visited{
+  color: #000000;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 491px;
+  width: 100%;
+}
+.nav-item {
+  list-style: none;
+}
+.nav-item a{
+  color: #010201;
+  text-decoration: none;
+}
+.nav-item a:hover{
+  text-decoration: underline;
+}
+.nav-item.selected a{
+  color: #E06733;
+}
+.nav-item.selected a:hover{
+  text-decoration: none;
+}
+
+/* Welcome section */
+
+.section-welcome{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 532px;
+  align-items: center;
+}
+.section-welcome-heading{
+  margin-top: 5px;
+  font-size: 45px;
+  line-height: 50px;
+  color: #717171;
+}
+.section-welcome-heading .colored{
+  color: #499A18;
+}
+.section-welcome-image{
+  background-image: url('../assets/leafs.png');
+  background-repeat: no-repeat;
+  min-width: 462px;
+  height: 424px;
+}
+.section-welcome-text {
+  max-width: 549px;
+}
+.section-welcome-description{
+  color: #636060;
+  font-size: 20px;
+  line-height: 35px;
+  margin-bottom: 48px;
+  margin-top: 42px;
+}
+.welcome-button {
+  padding: 0 27px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 2px solid #E06733;
+  height: 44px;
+  cursor: pointer;
+}
+.welcome-button:hover{
+  color: #ffffff;
+  background-color: #E06733;
 }
