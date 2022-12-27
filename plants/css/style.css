@@ -259,3 +259,162 @@ body {
   justify-content: space-between;
   flex-direction: row;
 }
+
+/* Price section */
+
+.section-prices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 560px;
+  padding-top: 40px;
+}
+.section-prices-heading{
+  font-size: 40px;
+  line-height: 48px;
+  margin-top: 0;
+}
+.section-prices-heading .colored{
+  color: #499A18;
+}
+.section-prices-right-block{
+  text-align: right;
+}
+.section-prices-right-block .section-prices-heading{
+  max-width: 452px;
+  line-height: 50px;
+  margin-bottom: 38px;
+}
+.section-prices-left-block .section-prices-heading{
+  margin-bottom: 60px;
+}
+.section-prices-image{
+  background-image: url('../assets/leafs-2.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  min-width: 152px;
+  height: 175px;
+}
+.contact-us-button{
+  font-family: 'Inika', serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #E06733;
+  width: 162px;
+  height: 50px;
+  border: 1px solid #E06733;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin-bottom: 39px;
+}
+.contact-us-button:hover{
+  color: #ffffff;
+  background-color: #E06733;
+}
+
+/* Accordion */
+
+.section-prices-accordeon{
+  max-width: 332px;
+  padding: 30px 40px 30px 40px;
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+#accordion input {
+	display: none;
+}
+#accordion label {
+	background-color: #EDF2EC;
+	border-radius: 20px;
+	cursor: pointer;
+	display: block;
+	margin-bottom: 32px;
+	padding: 16px 40px;
+	z-index: 20;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 19px;
+}
+#accordion > div:last-child > label{
+	margin-bottom: 0px;
+}
+#accordion label:before {
+  content: url(../assets/accordion_btn.svg);
+  width: 16px;
+  height: 16px;
+  margin-top: 1.5px;
+  float: right;
+}
+#accordion label:hover {
+	background: #D6E7D2;
+}
+#accordion input:checked + label {
+	background: #D6E7D2;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-bottom: 0;
+}
+#accordion article {
+	background: #D6E7D2;
+	height:0px;
+	overflow:hidden;
+	z-index:10;
+}
+#accordion article button {
+  margin: 0 40px;
+}
+#accordion input:checked ~ article {
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	height: auto;
+	margin-bottom: 32px;
+  padding-bottom: 12px;
+}
+
+#accordion > div:nth-child(3) > article{
+  margin-bottom: 0;
+}
+
+#accordion input:checked + label:before {
+  /* transition: transform .35s;
+  transform: rotate(180deg); */
+  content: url(../assets/accordion_btn-2.svg);
+}
+
+.option-description{
+  margin: 0 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-top: 0.5px solid #AEA1A1;
+  font-size: 10px;
+  line-height: 10px;
+  color: #717171;
+}
+.option-price{
+  margin: 0 40px;
+  padding: 6px 0 12px 0;
+}
+.option-price .colored{
+  font-size: 16px;
+  font-weight: bold;
+  color: #E06733;
+}
+.order-button{
+  width: 86px;
+  height: 25px;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #717171;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.order-button:hover{
+  background-color: #717171;
+  color: #FFFFFF;
+}
