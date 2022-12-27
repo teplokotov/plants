@@ -75,7 +75,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 532px;
+  min-height: 532px;
   align-items: center;
 }
 .section-welcome-heading{
@@ -115,3 +115,42 @@ body {
   color: #ffffff;
   background-color: #E06733;
 }
+
+/* About section */
+
+.section-about-us{
+  min-height: 666px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-about-us-heading{
+  font-family: 'Inika', serif;
+  font-size: 40px;
+  font-weight: normal;
+  color: #499A18;
+  max-width: 463px;
+  margin-bottom: 40px;
+  line-height: 50px;
+}
+.section-about-us-heading .colored{
+  color: #E06733;
+}
+.section-about-us-description{
+  color: #636060;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 30px;
+}
+.section-about-us-text{
+  max-width: 605px;
+}
+.section-about-us-image{
+  background-image: url('../assets/houseplant-1.png');
+  background-repeat: no-repeat;
+  min-width: 464px;
+  height: 479px;
+}
+
+/* Service section */
