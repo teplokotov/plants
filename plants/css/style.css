@@ -110,6 +110,7 @@ body {
   border: 2px solid #E06733;
   height: 44px;
   cursor: pointer;
+  background-color: #EDF2EC;
 }
 .welcome-button:hover{
   color: #ffffff;
@@ -154,3 +155,107 @@ body {
 }
 
 /* Service section */
+
+.section-service {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 66px;
+}
+.section-service-upper-content{
+  max-width: 1007px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+.service-upper-content-heading{
+  font-family: 'Inika', serif;
+  font-size: 40px;
+  font-weight: normal;
+  color: #499A18;
+  max-width: 306px;
+  margin: 0 142px 0 0;
+  line-height: 52px;
+}
+.service-upper-content-buttons{
+  width: 559px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.service-button{
+  font-family: 'Inika', serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 26px;
+  color: #E06733;
+  width: 161px;
+  height: 50px;
+  border: 1px solid #E06733;
+  border-radius: 5px;
+  background-color: #EDF2EC;
+  cursor: pointer;
+  padding-right: 10px;
+  margin-right: 5px;
+}
+.service-button:last-child{
+  margin-right: 0;
+}
+.service-button:hover{
+  color: #ffffff;
+  background-color: #E06733;
+}
+.service-item{
+  width: 330px;
+  margin-bottom: 55px;
+}
+.service-item-image{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 350px;
+}
+.service-item-image.image-1{
+  background-image: url(../assets/img-1.png);
+}
+.service-item-image.image-2{
+  background-image: url(../assets/img-2.png);
+}
+.service-item-image.image-3{
+  background-image: url(../assets/img-3.png);
+}
+.service-item-image.image-4{
+  background-image: url(../assets/img-4.png);
+}
+.service-item-image.image-5{
+  background-image: url(../assets/img-5.png);
+}
+.service-item-image.image-6{
+  background-image: url(../assets/img-6.png);
+}
+.service-item-heading{
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #E06733;
+  margin: 8px 0;
+}
+.service-item-description{
+  border: 1px solid #E3E1D5;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  text-align: center;
+  height: 100px;
+}
+.service-item-description-text{
+  font-size: 16px;
+  line-height: 20px;
+  color: #717171;
+}
+.section-service-lower-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
