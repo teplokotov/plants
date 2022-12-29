@@ -8,8 +8,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 320px;
-  max-width: 1440px;
+  min-width: 1440px; /* "Ширина контента 1440рх не должна изменяться при изменении размера окна браузера." */
+  max-width: 1440px; /* "Ширина контента 1440рх не должна изменяться при изменении размера окна браузера." */
   font-family: 'Inter', sans-serif;
   margin: 0 auto;
 }
@@ -71,6 +71,7 @@ body::after{
 }
 .nav-item.selected a{
   color: #E06733;
+  cursor: default;
 }
 .nav-item.selected a:hover{
   text-decoration: none;
@@ -364,13 +365,13 @@ body::after{
 	background: #D6E7D2;
   transition: background .2s;
 }
-#accordion input:checked + label {
+/* #accordion input:checked + label {
 	background: #D6E7D2;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 	margin-bottom: 0;
   transition: border-bottom-right-radius 0.1s, border-bottom-left-radius 0.1s;
-}
+} */
 #accordion .option-data {
 	background: #D6E7D2;
 	height:0px;
@@ -383,23 +384,20 @@ body::after{
 #accordion .option-data button {
   margin: 0 40px;
 }
-#accordion input:checked ~ .option-data {
+/* #accordion input:checked ~ .option-data {
 	height: 116px;
 	margin-bottom: 32px;
-  /* padding-bottom: 12px; */
   transition: height 0.2s;
   transition-delay: 0.2s;
-}
+} */
 
 #accordion > div:nth-child(3) > .option-data{
   margin-bottom: 0;
 }
 
-#accordion input:checked + label:before {
-  /* transition: transform .35s;
-  transform: rotate(180deg); */
+/* #accordion input:checked + label:before {
   content: url(../assets/accordion_btn-2.svg);
-}
+} */
 
 .option-description{
   margin: 0 40px;
