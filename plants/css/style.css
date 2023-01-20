@@ -147,6 +147,7 @@ body::after{
   height: 44px;
   cursor: pointer;
   background-color: #EDF2EC;
+  color: #000000;
 }
 .welcome-button:hover{
   color: #ffffff;
@@ -236,8 +237,8 @@ body::after{
   border-radius: 5px;
   background-color: #EDF2EC;
   cursor: pointer;
-  padding-right: 10px;
-  margin-right: 5px;
+  padding: 0;
+  margin: 0;
 }
 .service-button:last-child{
   margin-right: 0;
@@ -866,7 +867,7 @@ body::after{
   }
   .nav-list {
     padding: 0;
-    margin: 45px 0 135px 0;
+    margin: 45px 0 225px 0;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
@@ -962,7 +963,6 @@ body::after{
     width: 121px;
     height: 35px;
     font-size: 15px;
-    padding-left: 10px;
   }
   .service-upper-content-buttons {
     margin-bottom: 29px;
