@@ -243,7 +243,14 @@ body::after{
 .service-button:last-child{
   margin-right: 0;
 }
-.service-button:hover{
+@media (hover: hover) and (pointer: fine) {
+  .service-button:hover{
+    color: #ffffff;
+    background-color: #E06733;
+    transition: .2s;
+  }
+}
+.service-button.activated{
   color: #ffffff;
   background-color: #E06733;
   transition: .2s;
@@ -251,6 +258,11 @@ body::after{
 .service-item{
   width: 330px;
   margin-bottom: 55px;
+  filter: blur(0);
+  transition: 0.5s;
+}
+.blur{
+  filter: blur(5px);
 }
 .service-item-image{
   border-top-right-radius: 20px;
@@ -366,7 +378,7 @@ body::after{
   padding: 0 40px 30px 40px;
   border: 1px solid #E3E1D5;
   border-radius: 20px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 #accordion input {
 	display: none;
@@ -399,13 +411,18 @@ body::after{
 	background: #D6E7D2;
   transition: background .2s;
 }
-/* #accordion input:checked + label {
+#accordion input:checked + label {
 	background: #D6E7D2;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 	margin-bottom: 0;
   transition: border-bottom-right-radius 0.1s, border-bottom-left-radius 0.1s;
-} */
+  transition-delay: 0.2s;
+}
+#accordion input:not(:checked) + label {
+  transition: border-bottom-right-radius 0.1s, border-bottom-left-radius 0.1s;
+  transition-delay: 0.2s;
+}
 #accordion .option-data {
 	background: #D6E7D2;
 	height:0px;
@@ -418,20 +435,21 @@ body::after{
 #accordion .option-data button {
   margin: 0 40px;
 }
-/* #accordion input:checked ~ .option-data {
+#accordion input:checked ~ .option-data {
 	height: 116px;
+  min-width: 180px;
 	margin-bottom: 32px;
   transition: height 0.2s;
   transition-delay: 0.2s;
-} */
+}
 
 #accordion > div:nth-child(3) > .option-data{
   margin-bottom: 0;
 }
 
-/* #accordion input:checked + label:before {
+#accordion input:checked + label:before {
   content: url(../assets/accordion_btn-2.svg);
-} */
+}
 
 .option-description{
   margin: 0 40px;
@@ -505,30 +523,75 @@ body::after{
   background-color: #D6E7D2;
   color: #717171;
   font-size: 20px;
+  line-height: 40px;
   letter-spacing: 0.05em;
   text-align: left;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 5px 35px 5px 20px;
   cursor: pointer;
+  transition: 0.5s;
 }
 .city-select:before {
   content: url(../assets/accordion_btn-2.svg);
   transform: rotate(180deg);
   float: right;
+  font-size: 20px;
+  transition: 0.5s;
 }
 .city-select:hover{
   background-color: #C1E698;
   transition: 0.5s;
 }
-.dropdown-content{
+.city-select.opened{
+  background-color: #C1E698;
+  padding-left: 35px;
+  transition: 0.5s;
+}
+.city-select.selected{
+  background-color: #C1E698;
+  font-size: 16px;
+  padding-left: 35px;
+  transition: 0.5s;
+}
+.city-select.opened:before {
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+.contact-us-dropdown-content{
+  background-color: #DCE9D9;
+  padding: 27px 35px 31px 35px;
   display: none;
+  flex-direction: column;
+  row-gap: 12px;
+  width: 450px;
+  position: absolute;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+.contact-us-dropdown-content.opened{
+  display: flex;
+}
+.dropdown-link{
+  padding: 0;
+  cursor: pointer;
+  color: #499A18;
+  border-bottom: 1px solid #D9D9D9;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+}
+.dropdown-link:hover{
+  cursor: pointer;
+  color: #717171;
+  border-bottom: 1px solid #717171;
 }
 
 /* Selected adress */
 
 .contact-us-adress{
-  display: flex;
+  display: none;
   flex-wrap: nowrap;
   flex-direction: column;
   margin-top: 47px;
@@ -543,12 +606,14 @@ body::after{
 }
 .row-city-heading, .row-phone-heading, .row-adress-heading{
   width: 132px;
+  letter-spacing: 0.05em;
 }
 .row-city-value, .row-phone-value, .row-adress-value{
   color: #717171;
+  letter-spacing: 0.05em;
 }
 .contact-us-button-row{
-  margin-top: 24px;
+  margin-top: 18px;
   width: 122px;
   height: 26px;
   align-self: center;
@@ -815,6 +880,15 @@ body::after{
   .city-select {
     margin-top: 66px;
   }
+  .city-select.selected{
+    margin-top: 15px;
+  }
+  .contact-us-adress.fix768 {
+    margin-top: 60px;
+  }
+  .section-contact-us-image.fix768 {
+    margin-top: 0;
+  }
   /* Footer */
   .footer-container {
     height: 181px;
@@ -1028,6 +1102,12 @@ body::after{
     width: 121px;
     height: 35px;
   }
+  .option-description, .option-price, #accordion .option-data button {
+    margin: 0 29px;
+  }
+  #accordion input:checked ~ .option-data {
+    height: 126px;
+  }
   /* Contact-us section */
   .container-contact-us {
     min-height: 445px;
@@ -1048,6 +1128,37 @@ body::after{
     height: 124px;
     margin-top: 80px;
     margin-left: -5px;
+  }
+  .section-contact-us-image.fix380 {
+    display: none;
+  }
+  .contact-us-adress.fix380{
+    width: 282px;
+    height: 212px;
+    margin-bottom: 33px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 23px 22px 21px 37px;
+  }
+  .contact-us-adress.fix380 .row-city-heading{
+    width: 64px;
+  }
+  .contact-us-adress.fix380 .row-phone-heading{
+    width: 64px;
+  }
+  .contact-us-adress.fix380 .row-adress-heading{
+    width: 64px;
+    line-height: 20px;
+  }
+  .contact-us-adress.fix380 .row-adress-value{
+    line-height: 20px;
+  }
+  .contact-us-dropdown-content{
+    width: 300px;
+  }
+  .city-select.selected {
+    padding-left: 22px;
+    transition: 0.5s;
   }
   /* Footer */
   .footer-container {
