@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    window.addEventListener('resize', function(event){
+        if (document.querySelector('.city-select.selected')) {
+            if (window.screen.width >= 766 && window.screen.width <= 1438) {
+                document.querySelector('.contact-us-adress').classList.add('fix768');
+                document.querySelector('.section-contact-us-image').classList.add('fix768');
+            }
+            if (window.screen.width <= 766) {
+                document.querySelector('.contact-us-adress').classList.remove('fix768');
+                document.querySelector('.section-contact-us-image').classList.remove('fix768');
+                document.querySelector('.contact-us-adress').classList.add('fix380');
+                document.querySelector('.section-contact-us-image').classList.add('fix380');
+            }
+        }
+    });
+
     const body = document.querySelector('.body');
     const header = document.querySelector('.header');
     const toggleBox = document.querySelector('.toggle-box');
@@ -88,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (window.screen.width <= 766) {
                 document.querySelector('.contact-us-adress').classList.add('fix380');
                 document.querySelector('.section-contact-us-image').classList.add('fix380');
-
             }
         }
 
